@@ -1,19 +1,15 @@
-package com.example.demo.service;
-
+package com.example1.demo1.service;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-
-import com.example.demo.model.Response;
-
+import com.example1.demo1.model.Response;
 import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-@Qualifier("ModifySystemTime")
-public class ModifySystemTime implements MyModifyService {
-    @Override
+@Qualifier("ModifyErrorMessage")
+public class ModifyErrorMessage implements MyModifyService {
     public Response modify(Response response){
-        response.setSystemTime(""+System.currentTimeMillis());
+        response.setErrorMessage("Something wrong");
         return response;
     }
 }

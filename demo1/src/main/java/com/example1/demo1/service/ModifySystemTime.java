@@ -1,10 +1,7 @@
-package com.example.demo.service;
-
+package com.example1.demo1.service;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-
-import com.example.demo.model.Response;
-
+import com.example1.demo1.model.Response;
 import lombok.RequiredArgsConstructor;
 
 @Service
@@ -13,7 +10,8 @@ import lombok.RequiredArgsConstructor;
 public class ModifySystemTime implements MyModifyService {
     @Override
     public Response modify(Response response){
-        response.setSystemTime(""+System.currentTimeMillis());
+        response.setSystemTime("");
         return response;
     }
 }
+
